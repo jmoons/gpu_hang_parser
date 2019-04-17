@@ -12,7 +12,7 @@ PLAYER_ID_INDEX    = 3
 PLAYER_TIME_INDEX  = 4
 
 
-File.open("grep_sample").readlines.each do |line|
+File.open("grep_output").readlines.each do |line|
 
   parsed_line = REGULAR_EXPRESSION.match( line.chomp )
 
