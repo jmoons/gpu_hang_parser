@@ -16,6 +16,8 @@ File.open("grep_output").readlines.each do |line|
 
   parsed_line = REGULAR_EXPRESSION.match( line.chomp )
 
+  next unless parsed_line
+
   puts "#{parsed_line[SERVER_TIME_INDEX]},#{parsed_line[PLAYER_ID_INDEX]},#{parsed_line[PLAYER_TIME_INDEX]},#{parsed_line[CUSTOMER_INDEX]}"
 
 end
